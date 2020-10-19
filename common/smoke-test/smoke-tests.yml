@@ -2,32 +2,12 @@ jobs:
   - job: SmokeTest
     strategy:
       matrix:
-        Linux (AzureCloud):
-          OSVmImage: "ubuntu-18.04"
-          SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
-          ArmTemplateParameters: $(AzureCloudArmTemplateParameters)
-        Windows (AzureCloud):
-          OSVmImage: "windows-2019"
-          SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
-          ArmTemplateParameters: $(AzureCloudArmTemplateParameters)
-        Mac (AzureCloud):
-          OSVmImage: "macOS-10.14"
-          SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
-          ArmTemplateParameters: $(AzureCloudArmTemplateParameters)
         Linux (AzureUSGovernment):
           OSVmImage: "ubuntu-18.04"
           SubscriptionConfiguration: $(sub-config-gov-test-resources)
           ArmTemplateParameters: $(AzureUSGovernmentArmTemplateParameters)
-        Windows (AzureUSGovernment):
-          OSVmImage: "windows-2019"
-          SubscriptionConfiguration: $(sub-config-gov-test-resources)
-          ArmTemplateParameters: $(AzureUSGovernmentArmTemplateParameters)
         Linux (AzureChinaCloud):
           OSVmImage: "ubuntu-18.04"
-          SubscriptionConfiguration: $(sub-config-cn-test-resources)
-          ArmTemplateParameters: $(AzureChinaCloudArmTemplateParameters)
-        Windows (AzureChinaCloud):
-          OSVmImage: "windows-2019"
           SubscriptionConfiguration: $(sub-config-cn-test-resources)
           ArmTemplateParameters: $(AzureChinaCloudArmTemplateParameters)
 
