@@ -2,10 +2,11 @@ jobs:
   - job: SmokeTest
     strategy:
       matrix:
-        Linux (AzureCloud):
+        Linux Node8 (AzureCloud):
           OSVmImage: "ubuntu-18.04"
           SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
           ArmTemplateParameters: $(AzureCloudArmTemplateParameters)
+          NodeTestVersion: "8.x"
         Windows (AzureCloud):
           OSVmImage: "windows-2019"
           SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
