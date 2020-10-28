@@ -7,6 +7,12 @@ jobs:
           SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
           ArmTemplateParameters: $(AzureCloudArmTemplateParameters)
           NodeTestVersion: "14.x"
+        Linux Node14 (AzureCloud Canary):
+          OSVmImage: "ubuntu-18.04"
+          SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources-preview)
+          ArmTemplateParameters: $(AzureCloudArmTemplateParameters)
+          Location: "eastus2euap"
+          NodeTestVersion: "14.x"
         Windows Node12 (AzureCloud):
           OSVmImage: "windows-2019"
           SubscriptionConfiguration: $(sub-config-azure-cloud-test-resources)
